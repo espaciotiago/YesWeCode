@@ -1,0 +1,181 @@
+@import "./variables.scss";
+
+.main-item-container {
+  display: flex;
+  height: 78vh;
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 32px;
+    height: 100%;
+    width: 50%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 5px;
+      max-width: 90%;
+      max-height: 65%;
+    }
+
+    .selectors {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin-top: 8px;
+      span {
+        cursor: pointer;
+        div {
+          border-radius: 50%;
+          margin: 6px;
+          height: 8px;
+          width: 8px;
+          background: $colorText;
+        }
+      }
+    }
+  }
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    .content {
+      display: block;
+      overflow: scroll;
+      max-height: 100%;
+
+      h1 {
+        font-size: 60px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.bottom-view {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $colorSecondary;
+  height: 12vh;
+  box-shadow: -0 -5px 5px -5px #333;
+
+  .scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+
+    .item {
+      padding: 0 !important;
+      span {
+        cursor: pointer;
+      }
+      img {
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .item-landscape {
+      width: 200px;
+      height: 100%;
+      margin-left: 16px;
+      display: inline-block;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+
+    .item-portrait {
+      width: 70px;
+      height: 100%;
+      margin-left: 16px;
+      display: inline-block;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+  }
+
+  .portfolio-items-container {
+    width: 100%;
+    height: 140px;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.tags{
+  display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-item-container {
+    display: block;
+    height: initial;
+
+    .info-container {
+      width: 100%;
+      .content {
+        h1 {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      justify-content: center;
+      padding: 0;
+      img {
+        max-height: 240px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom-divider{
+    height: 200px;
+  }
+  .main-item-container {
+    .info-container {
+      .content {
+        padding: 8px;
+        h1 {
+          font-size: 32px;
+          text-align: center;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  .bottom-view {
+    .scrollmenu {
+      .item-landscape {
+        width: 150px;
+      }
+      .item-portrait {
+        width: 50px;
+      }
+    }
+    .portfolio-items-container {
+      height: 120px;
+      margin-top: -50px;
+    }
+  }
+}

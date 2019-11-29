@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.tag-container{
+    margin: 4px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    p{
+        color: $colorWhite;
+        font-size: small;
+        margin: 0;
+    }
+}

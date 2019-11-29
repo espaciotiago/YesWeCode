@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $colorPrimary;
+  color: $colorText;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  color: $colorWhite;
+}

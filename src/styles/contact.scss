@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+.split-screen {
+  display: flex;
+  .content {
+    display: inline;
+    text-align: center;
+  }
+}
+
+.right-contact {
+  height: 100vh;
+  background: $colorSecondary;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 8px;
+    img {
+      width: 42px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .main-container {
+    height: 40vh;
+  }
+  .split-screen {
+    display: initial;
+  }
+  .right-contact{
+    width: 100%;
+    height: 60vh;
+  }
+}

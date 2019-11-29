@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.mem-container {
+  margin: 8px;
+  position: relative;
+  span{
+      cursor: pointer;
+  }
+  img {
+    border-radius: 50%;
+    max-width: 48px;
+  }
+  .name-info{
+      background: rgba($color: #000000, $alpha: .6);
+      font-size: 12px;
+      padding: 4px 16px;
+      color: $colorWhite;
+      position: absolute;
+      top:15px;
+      left: 10px;
+      z-index: 1;
+  }
+
+  .inactive{
+    display: none;
+  }
+}
