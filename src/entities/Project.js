@@ -67,7 +67,7 @@ projects.push(
         link: "",
         github: "",
         tags: [android, java, net],
-        members: [members.memberTiago],
+        members: [members.memberTiago], 
         landscape: false
     },
 )

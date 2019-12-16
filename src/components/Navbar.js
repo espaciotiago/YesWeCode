@@ -6,6 +6,17 @@ import icMenu from '../assets/ic_menu.png'
 //Style
 import '../styles/navbar.scss'
 
+const onShowMenu = () => {
+    const menu = document.getElementById("options")
+    if(menu.classList.contains("hidden")){
+        menu.classList.remove("hidden")
+        menu.classList.add("showing")
+    }else{
+        menu.classList.remove("showing")
+        menu.classList.add("hidden")
+    }
+}
+
 function Navbar(props) {
     const active = props.active
     const center = props.center
@@ -17,7 +28,7 @@ function Navbar(props) {
                     {/* Hidden menu */}
                     <div className="hidden-menu">
                         <div className="menu-icon">
-                            <span>
+                            <span onClick={onShowMenu}>
                                 <img src={icMenu} />
                             </span>
                         </div>
@@ -26,6 +37,9 @@ function Navbar(props) {
                         <Link to="/">
                             <img src={Logo} />
                         </Link>
+                    </div>
+
+                    <div className = "hidden-options hidden" id = "options">
                     </div>
                 </div>}
             {/* Navbar option */}
